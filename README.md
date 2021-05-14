@@ -8,3 +8,4 @@
 - class-state => 클래스 컴포넌트에서의 state 사용, 동적으로 변수를 제어
 - func-state => 함수형 컴포넌트에서의 state 사용, 동적으로 변수를 제어
 - react-event => 리액트에서 이벤트를 제어하는 법
+- repeat-component => 반복적으로 컴포넌트를 구성
