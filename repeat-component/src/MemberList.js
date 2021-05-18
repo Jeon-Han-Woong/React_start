@@ -12,6 +12,8 @@ const Member = (member) => {
 }
 
 const MemberList = () => {
+
+    
     const memberinfo = [
         {
             name: "홍길동",

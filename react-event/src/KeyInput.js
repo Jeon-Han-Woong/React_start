@@ -49,7 +49,7 @@ const KeyInput = () => {
     }
 
     const onKeyPress = e => {
-        if(e.key === 8){
+        if(e.key === ' '){
             alert("스페이스바 입력 감지");
             onClick();
         }
