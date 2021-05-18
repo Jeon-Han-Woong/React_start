@@ -1,0 +1,23 @@
+.styleName {
+  color: red;
+  background-color: aqua;
+  text-align: center;
+}
+
+.styleAge {
+  color: aquamarine;
+  background-color: brown;
+  text-align: center;
+}
+
+.stylePhone {
+  color: darkblue;
+  background-color: darkgoldenrod;
+  text-align: center;
+}
+
+.styleJob {
+  color: white;
+  background-color: deeppink;
+  text-align: center;
+}
