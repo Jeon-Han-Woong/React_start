@@ -3,6 +3,7 @@ import './App.css';
 import AxiosTest from './AxiosTest';
 import FetchTest from './FetchTest';
 import AxiosTest2 from './AxiosTest2';
+import FetchTest2 from './FetchTest2';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <AxiosTest></AxiosTest>
       <FetchTest></FetchTest>
       <AxiosTest2></AxiosTest2>
+      <FetchTest2></FetchTest2>
     </div>
   );
 }

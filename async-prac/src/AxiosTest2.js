@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import "./ReplyStyle.css"
 
 const Print = ({exe}) => {
     return (
-        <div>
+        <div className='reply'>
             <p>댓글 번호 : {exe.rno}</p>
             <p>글 번호 : {exe.bno}</p>
             <p>댓글 내용 : {exe.replytext}</p>
@@ -23,7 +24,11 @@ const AxiosTest2 = () => {
         .then(response => {
             setData(response.data);
         });
-    }
+    };
+
+    useEffect(() => {
+        onClick();
+    });
 
     return (
         <div>
