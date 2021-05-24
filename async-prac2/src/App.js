@@ -1,21 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 import NotUsetStateAxios from './NotUseStateAxios';
 import NotUsetStateFetch from './NotUseStateFetch';
 import UsetStateAxios from './UseStateAxios';
 import UsetStateFetch from './UseStateFetch';
+import APIUseState from './APIUseState';
 
 function App() {
   return (
     <div>
-      <NotUsetStateAxios></NotUsetStateAxios>
-      <br/>
+      {/* <NotUsetStateAxios></NotUsetStateAxios> */}
       <NotUsetStateFetch></NotUsetStateFetch>
-      <br/>
       {/* <UsetStateAxios></UsetStateAxios> */}
-      <br/>
       {/* <UsetStateFetch></UsetStateFetch> */}
+      <APIUseState></APIUseState>
     </div>
   );
 }
