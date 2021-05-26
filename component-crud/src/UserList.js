@@ -1,9 +1,13 @@
 import React from 'react';
 import './MyStyle.css';
 
-const User = ({user, onRemove}) => {
+const User = ({user, onRemove, onToggle}) => {
     return(
-        <div className="mine">
+        <div>
+            <b style={{
+                cursor: 'pointer',
+                color: user.clicked ? 'blue' : 'black'
+            }} onClick={() => onToggle(user.id)}>{user.username}</b>
             <p>{user.id}</p>
             <p>{user.username}</p>
             <p>{user.nickname}</p>
@@ -14,14 +18,14 @@ const User = ({user, onRemove}) => {
 }
 
 
-const UserList = ({users, onRemove}) => {
+const UserList = ({users, onRemove, onToggle}) => {
     return (
         <div>
             {users.map(temp => (
-                <User user={temp} key={temp.id} onRemove={onRemove}/>
+                <User user={temp} key={temp.id} onRemove={onRemove} onToggle={onToggle}/>
             ))}
         </div>
     );
 }
 
-export default UserList;
+export default React.memo(UserList);

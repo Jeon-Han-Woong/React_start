@@ -8,10 +8,11 @@ function App() {
 
   const [inputs, setInputs] = useState({
     price: '',
-    menuname: ''
+    menuname: '',
+    clicked : false
   });
 
-  const {price, menuname} = inputs;
+  const {price, menuname, clicked} = inputs;
 
   const onChange = (e) => {
     const {name, value} = e.target;
@@ -25,17 +26,20 @@ function App() {
     {
       id : 1,
       price : 8000,
-      menuname : "부대찌개"
+      menuname : "부대찌개",
+      clicked : true
     },
     {
       id : 2,
       price : 7000,
-      menuname : "김치 볶음밥"
+      menuname : "김치 볶음밥",
+      clicked : false
     },
     {
       id : 3,
       price : 6500,
-      menuname : "된장찌개"
+      menuname : "된장찌개",
+      clicked : true
     }
   ]);
 
@@ -44,7 +48,8 @@ function App() {
     const newmenu = {
       id : nextId.current,
       price,
-      menuname
+      menuname,
+      clicked: false,
     };
 
     setMenu([...menu, newmenu]);
@@ -62,10 +67,14 @@ function App() {
     setMenu(menu.filter(newmenu => newmenu.id !== id));
   }
 
+  const onToggle = (id) => {
+    setMenu(menu.map(newmenu => newmenu.id === id ? {...newmenu, clicked : !newmenu.clicked} : newmenu));
+  };
+
   return (
     <div>
       <InputMenu price={price} menuname={menuname} onChange={onChange} onCreate={onCreate}></InputMenu>
-      <MenuList menu={menu} onRemove={onRemove}></MenuList>
+      <MenuList menu={menu} onRemove={onRemove} onToggle={onToggle}></MenuList>
     </div>
   );
 }
