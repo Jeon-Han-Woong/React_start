@@ -15,4 +15,7 @@
 - useref-prac2 => useref를 활용한 심화 예제
 - async-prac => 외부 json 파일 불러오기
 - async-prac2 => async  관련 심화 예제
-
+- component-crud => 새로운 유저를 등록하고 표출 하는 예제
+- component-crud2 = > 새로운 메뉴를 등록하고 표출 하는 예제
+- todolist => 지금까지 학습한 리액트를 이용해 오늘 할일에 대한 내용을 추가, 삭제 하며 완료 여부를 체크박스로 표현하는 예제
+- newsapi => api로 json 데이터를 가져와 간단한 웹 뉴스를 만드는 예제, 카테고리별, 국가별 분류 가능
